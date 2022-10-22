@@ -1,0 +1,39 @@
+.main {
+  background-color: black;
+  opacity: 0.6;
+  padding-left: 20%;
+  margin: 0 auto;
+  width: 100vw;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  align-items: center;
+  gap: 2em;
+}
+
+h1 {
+  font-size: 3em;
+  color: aqua;
+}
+
+.info-content span {
+  color: aqua;
+}
+
+.download-cv {
+  padding: 10px 20px;
+  background-color: aqua;
+  border: none;
+  border-radius: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 3px 11px -5px rgba(102,231,200,0.69);
+  -moz-box-shadow: 1px 3px 11px -5px rgba(102,231,200,0.69);
+  box-shadow: 1px 3px 11px -5px rgba(102,231,200,0.69);
+}
+
+.download-cv:hover {
+  background-color: azure;
+  box-shadow: none;
+}
+
