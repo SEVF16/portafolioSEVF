@@ -5,8 +5,6 @@
   margin: 0;
   padding-bottom: 0;
   overflow: hidden;
-  background-color: #333;
-  grid-template-columns: 100%;
 }
 
 li {
@@ -29,7 +27,3 @@ li a:hover {
   height: 100;
 }
 
-footer{
-  background-color: #333;
-  grid-template-columns: 100%;
-}

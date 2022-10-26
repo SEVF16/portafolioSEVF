@@ -1,1 +1,11 @@
-<p>habilidades works!</p>
+<main>
+  <div class="tamaño">
+    <div class="card" *ngFor="let habilidad of arrHabilidades">
+      <img [src]="habilidad.img" alt="Avatar" class="imgH">
+      <div class="container">
+        <h4><b>{{habilidad.name}}</b></h4>
+        <p>{{habilidad.area}}</p>
+      </div>
+    </div>
+  </div>
+</main>

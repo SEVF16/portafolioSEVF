@@ -6,6 +6,9 @@ import { InicioComponent } from './inicio/inicio.component';
 import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
 
 const routes: Routes = [
+  {path: "",
+  component: InicioComponent
+  },
   {path: "inicio",
   component: InicioComponent
   },
