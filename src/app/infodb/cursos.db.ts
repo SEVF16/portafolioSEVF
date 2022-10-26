@@ -19,7 +19,7 @@ export const Curso: Cursos[] = [
   {
     id: 4,
     titulo: 'Python',
-    Escuela: 'Course',
+    Escuela: 'Coursera',
   }
 ]
 
