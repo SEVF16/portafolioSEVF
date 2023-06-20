@@ -13,7 +13,7 @@ export const Habilidades: HabilidadesModel[] = [
     typeSkill: 0,
     area: 'Backend',
     name: 'Django',
-    img: '../assets/img/django.png'
+    img: 'assets/img/django.png'
   },
   {
     id: 3,
