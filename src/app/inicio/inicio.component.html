@@ -1,10 +1,11 @@
-<div class="container">
-  <div class="card">
+<div class="container" id="card">
+  <div class="card" [ngClass]="{'flipped': isFlipped}" (click)="flipCard()">
     <div class="front">
       <!-- Contenido de la cara frontal de la tarjeta -->
     </div>
     <div class="back">
       <!-- Contenido de la cara trasera de la tarjeta -->
+      <h1>Hola</h1>
     </div>
   </div>
 </div>

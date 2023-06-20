@@ -16,4 +16,9 @@ export const proyectoPe: Proyecto[] = [
     name: 'Dummy',
     img: '../assets/img/dummy.png',
   },
+  {
+    id: 4,
+    name: 'Ecommerce Geek',
+    img: '../assets/img/ecommerceAlura.png',
+  },
 ]
