@@ -1,5 +1,5 @@
-<main class="main">
-  <div class="info-Cursos hover">
+<div class="grid-container">
+  <div class="container info-Cursos hover">
     <h1>Cursos</h1>
     <table>
       <tr>
@@ -12,20 +12,38 @@
       </tr>
     </table>
   </div>
-  <div class="info-Educacion hover" >
+
+  <div class="container info-Educacion hover">
     <h1>Instituto Educativo</h1>
-    <tr *ngFor="let edu of arrEdu">
+    <table>
+      <tr *ngFor="let edu of arrEdu">
         <th>{{edu.Carrera}}</th>
         <th>{{edu.Escuela}}</th>
         <th>{{edu.gradoAcademico}}</th>
-    </tr>
+      </tr>
+    </table>
   </div>
-  <div class="info-Experiencia hover">
+
+  <div class="container info-Experiencia hover">
     <h1>Experiencia</h1>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt facilis minima eveniet accusamus rem sint doloribus quia eligendi expedita optio, dolore quo ipsa atque. Expedita doloremque deleniti alias iste quia?</p>
   </div>
-  <div class="info-Objetivos hover">
+
+  <div class="container info-Objetivos hover">
     <h1>Objetivo</h1>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt facilis minima eveniet accusamus rem sint doloribus quia eligendi expedita optio, dolore quo ipsa atque. Expedita doloremque deleniti alias iste quia?</p>
   </div>
-</main>
+
+  <div class="container debilidades hover">
+    <h1>Debilidades</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt facilis minima eveniet accusamus rem sint doloribus quia eligendi expedita optio, dolore quo ipsa atque. Expedita doloremque deleniti alias iste quia?</p>
+  </div>
+
+  <div class="container fortalezas hover">
+    <h1>Fortalezas</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt facilis minima eveniet accusamus rem sint doloribus quia eligendi</p>
+  </div>
+</div>
+
+
+
