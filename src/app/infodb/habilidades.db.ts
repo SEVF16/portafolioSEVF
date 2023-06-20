@@ -3,50 +3,109 @@ import { HabilidadesModel } from "../models/habilidades.model";
 export const Habilidades: HabilidadesModel[] = [
   {
     id: 1,
+    typeSkill: 0,
     area: 'Backend',
     name: 'Python',
-    img: 'https://www.citypng.com/public/uploads/preview/hd-python-logo-symbol-transparent-png-11639606208newcm5th7y.png'
+    img: '../assets/img/python.png'
   },
   {
     id: 2,
+    typeSkill: 0,
     area: 'Backend',
     name: 'Django',
-    img: 'https://img2.freepng.es/20180711/rtc/kisspng-django-web-development-web-framework-python-softwa-django-5b45d913f29027.4888902515313042119936.jpg'
+    img: '../assets/img/django.png'
   },
   {
     id: 3,
+    typeSkill: 0,
     area: 'Backend',
     name: 'Oracle',
-    img: 'https://w7.pngwing.com/pngs/121/681/png-transparent-amazon-relational-database-service-oracle-corporation-international-conference-on-functional-programming-oracle-database-oracle-policy-automation-others-text-logo-sql.png'
+    img: '../assets/img/oracle.png'
   },
   {
     id: 4,
+    typeSkill: 0,
     area: 'FrontEnd',
     name: 'HTML5',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/768px-HTML5_logo_and_wordmark.svg.png'
+    img: '../assets/img/html.png'
   },
   {
     id: 5,
+    typeSkill: 0,
     area: 'FrontEnd',
     name: 'CSS3',
-    img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png'
+    img: '../assets/img/css.png'
   },
   {
     id: 6,
+    typeSkill: 0,
     area: 'FrontEnd',
     name: 'JavaScript',
-    img: 'https://logodownload.org/wp-content/uploads/2022/04/javascript-logo-1.png'
+    img: '../assets/img/js.png'
   },
   {
     id: 7,
+    typeSkill: 0,
     area: 'FrontEnd',
     name: 'Bootstrap',
-    img: 'https://e7.pngegg.com/pngimages/391/430/png-clipart-bootstrap-full-logo-tech-companies.png'
+    img: '../assets/img/bts.png'
   },
   {
     id: 8,
+    typeSkill: 0,
     area: 'FrontEnd',
     name: 'Angular',
-    img: 'https://assets.stickpng.com/images/5847ea22cef1014c0b5e4833.png'
+    img: '../assets/img/Angularpng.png'
+  },
+  {
+    id: 9,
+    typeSkill: 0,
+    area: 'BackEnd',
+    name: 'Java',
+    img: '../assets/img/java.png'
+  },
+  {
+    id: 10,
+    typeSkill: 0,
+    area: 'Repositorio',
+    name: 'Github',
+    img: '../assets/img/git.png'
+  },
+  {
+    id: 11,
+    typeSkill: 0,
+    area: 'Metodologia',
+    name: 'Ágil',
+    img: '../assets/img/agil.png'
+  },
+  {
+    id: 12,
+    typeSkill: 1,
+    name: 'Excelente Relacion Interpersonales'
+  },
+  {
+    id: 13,
+    typeSkill: 1,
+    name: 'Pensamiento Analitico'
+  },
+  {
+    id: 14,
+    typeSkill: 1,
+    name: 'Adaptabilidad'
+  },
+  {
+    id: 15,
+    typeSkill: 1,
+    name: 'Gestión de tiempo'
+  },
+  {
+    id: 16,
+    typeSkill: 1,
+    name: 'AutoDidacta'
+  },
+  {
+    id: 17,
+    typeSkill: 1,
+    name: 'Comunicación Escrita y Oral'
   },
 ]

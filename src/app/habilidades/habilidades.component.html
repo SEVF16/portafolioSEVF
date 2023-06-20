@@ -1,13 +1,38 @@
-<main>
-  <div class="tamaño">
-    <div class="card" *ngFor="let habilidad of arrHabilidades">
-      <img [src]="habilidad.img" alt="Avatar" class="imgH">
-      <div class="container">
-        <h4><b>{{habilidad.name}}</b></h4>
-        <p>{{habilidad.area}}</p>
+<div class="containerPadre">
+  <h1 class="titulo">Hard Skill</h1>
+  <hr>
+  <div class="containerHijo">
+    <div class="card" *ngFor="let habilidad of hardSkill">
+      <div class="card-content">
+        <img [src]="habilidad.img" alt="Avatar" class="imgH">
+        <div class="container">
+          <h4><b>{{habilidad.name}}</b></h4>
+          <p>{{habilidad.area}}</p>
+        </div>
       </div>
     </div>
   </div>
+  <h1 class="titulo">Soft Skill</h1>
+  <hr>
+  <div class="containerHijo softskill">
+    <div class="oval-div" *ngFor="let habilidad of softSkill">
+      <p class="oval-text">{{habilidad.name}}</p>
+    </div>
+  </div>
+  <h1 class="titulo">Proyectos</h1>
+  <hr>
+  <div class="containerHijo proyectos-container">
+    <div class="card-proyecto" *ngFor="let proyecto of dataProyecto">
+      <div class="card-content-proyecto">
+        <h4>{{proyecto.name}}</h4>
+        <img [src]="proyecto.img" alt="Proyecto">
+        <button class="btn-ver-repositorio">Ver Repositorio</button>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <h1>Proyectos</h1>
-</main>
+
+
+
+
