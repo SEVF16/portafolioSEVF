@@ -1,6 +1,9 @@
 <header>
   <nav class="menu">
-    <ul>
+    <div class="mobile-menu-icon" (click)="toggleMobileMenu()" *ngIf="isMobileView">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul [ngClass]="{'active': isMobileMenuOpen, 'inactive': !isMobileMenuOpen}" *ngIf="!isMobileView || isMobileMenuOpen">
       <li><a routerLink="inicio">Inicio</a></li>
       <li><a routerLink="sobremi">Sobre Mi</a></li>
       <li><a routerLink="habilidades">Habilidades</a></li>
@@ -8,5 +11,8 @@
     </ul>
   </nav>
 </header>
+
+
+
 
 

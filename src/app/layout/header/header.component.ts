@@ -6,10 +6,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+  isMobileMenuOpen: boolean;
+  isMobileView: boolean;
+  constructor() {
+    this.isMobileMenuOpen = false;
+    this.isMobileView = false;
+   }
 
   ngOnInit(): void {
+    this.checkMobileView();
+    window.addEventListener('resize', () => {
+      this.checkMobileView();
+    });
+  }
+
+
+  toggleMobileMenu() {
+    this.isMobileMenuOpen = !this.isMobileMenuOpen;
+  }
+
+
+  checkMobileView() {
+    this.isMobileView = window.innerWidth <= 768; // Ajusta el ancho máximo para determinar el cambio a vista móvil
   }
 
 }

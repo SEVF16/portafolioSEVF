@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { HabilidadesModel } from '../models/habilidades.model';
-import { HabilidadesService } from '../Service/habilidades.service';
-import { ProyectoService } from '../Service/proyecto.service';
-import { Proyecto } from '../models/proyecto.model';
+import { Habilidad } from '../models/habilidades.interface';
+import { AllservicesService } from '../services/allservices.service';
+import { Proyecto } from '../models/proyecto.interface';
 
 @Component({
   selector: 'app-habilidades',
@@ -10,11 +9,11 @@ import { Proyecto } from '../models/proyecto.model';
   styleUrls: ['./habilidades.component.css']
 })
 export class HabilidadesComponent implements OnInit {
-  arrHabilidades: HabilidadesModel[];
-  softSkill: HabilidadesModel[];
-  hardSkill: HabilidadesModel[];
+  arrHabilidades: Habilidad[];
+  softSkill: Habilidad[];
+  hardSkill: Habilidad[];
   dataProyecto: Proyecto[];
-  constructor(private habilidadesService: HabilidadesService, private proyectoService: ProyectoService) {
+  constructor(private allservice: AllservicesService) {
     this.arrHabilidades = [];
     this.softSkill = [];
     this.hardSkill = [];
@@ -28,19 +27,19 @@ export class HabilidadesComponent implements OnInit {
   }
 
   filterHardSkills() {
-    return this.arrHabilidades = this.habilidadesService.getAll().filter((habilidad) => {
+    return this.arrHabilidades = this.allservice.getAllHabilidad().filter((habilidad) => {
       return habilidad.typeSkill === 0;
     });
   }
 
   filterSoftSkills() {
-    return this.arrHabilidades = this.habilidadesService.getAll().filter((habilidad) => {
+    return this.arrHabilidades = this.allservice.getAllHabilidad().filter((habilidad) => {
       return habilidad.typeSkill === 1;
     });
   }
 
   getProyecto() {
-    return this.proyectoService.getAll();
+    return this.allservice.getAllProyecto();
   }
 
 }

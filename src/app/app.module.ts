@@ -9,6 +9,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
 import { HabilidadesComponent } from './habilidades/habilidades.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 @NgModule({
   declarations: [

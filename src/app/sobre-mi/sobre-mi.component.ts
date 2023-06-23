@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Cursos } from '../models/curso.model';
-import { Educacion } from '../models/educacion.model';
-import { CursosService } from '../Service/cursos.service';
-import { EducacionService } from '../Service/educacion.service';
+import { AllservicesService } from '../services/allservices.service';
+import { Curso } from '../models/curso.interface';
+import { Educacion } from '../models/educacion.interface';
+import { SobreMi } from '../models/sobremi.interface';
+import { Experiencia } from '../models/experiencia.interface';
 
 @Component({
   selector: 'app-sobre-mi',
@@ -10,17 +11,27 @@ import { EducacionService } from '../Service/educacion.service';
   styleUrls: ['./sobre-mi.component.css']
 })
 export class SobreMiComponent implements OnInit {
-  arrCursos: Cursos[];
-  arrEdu: Educacion[];
-  constructor(private cursoService: CursosService, private eduService: EducacionService ) {
+  arrCursos: Curso[];
+  arrEducacion: Educacion[];
+  arrExperiencia: Experiencia[];
+  objetivo: string;
+  constructor(private allservice: AllservicesService ) {
     this.arrCursos = [];
-    this.arrEdu = [];
+    this.arrEducacion= [];
+    this.arrExperiencia = [];
+    this.objetivo = '';
    }
 
   ngOnInit(): void {
-    this.arrCursos = this.cursoService.getAll();
-    this.arrEdu = this.eduService.getAll();
-    console.log(this.arrEdu);
+    this.data();
+  }
+
+  data(){
+    const sobreMi: SobreMi = this.allservice.getSobreMi();
+    this.arrCursos = sobreMi.cursos;
+    this.arrEducacion = sobreMi.educacion;
+    this.arrExperiencia = sobreMi.experiencia;
+    this.objetivo = sobreMi.resumen;
   }
 
 }

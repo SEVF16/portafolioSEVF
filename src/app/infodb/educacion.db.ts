@@ -1,16 +1,14 @@
-import { Educacion } from "../models/educacion.model";
+import { Educacion } from "../models/educacion.interface";
 
 export const edu: Educacion[] = [
   {
-    id: 1,
-    Carrera: "Ingeniería en Informatica",
-    Escuela: "DUOC UC",
-    gradoAcademico: "En curso"
+    "titulo": "Licenciatura en Informática",
+    "institucion": "Universidad XYZ",
+    "fecha": "2015-2019"
   },
   {
-    id: 2,
-    Carrera: "Analista en Programacion",
-    Escuela: "DUOC UC",
-    gradoAcademico: "Egresado"
+    "titulo": "Maestría en Ingeniería de Software",
+    "institucion": "Universidad ABC",
+    "fecha": "2020-2022"
   }
 ]

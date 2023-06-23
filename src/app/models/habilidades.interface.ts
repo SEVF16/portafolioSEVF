@@ -1,4 +1,4 @@
-export class HabilidadesModel {
+export interface Habilidad {
   id?: number;
   typeSkill?: number;
   area?: String
