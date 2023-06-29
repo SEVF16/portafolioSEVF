@@ -24,7 +24,7 @@ export const sobremi: SobreMi[] =[
       {
         "id": 3,
         "typeSkill": 0,
-        "area": "Backend",
+        "area": "Base de Datos",
         "name": "Oracle",
         "img": "./assets/img/oracle.png"
       },
@@ -113,18 +113,24 @@ export const sobremi: SobreMi[] =[
         "id": 17,
         "typeSkill": 1,
         "name": "Comunicación Escrita y Oral"
+      },
+      {
+        "id": 18,
+        "typeSkill": 0,
+        "name": "Rxjs",
+        "img": "./assets/img/rxjs.png"
       }
     ],
     "educacion": [
       {
-        "titulo": "Licenciatura en Informática",
-        "institucion": "Universidad XYZ",
-        "fecha": "2015-2019"
+        "titulo": "Ingeniero en Informática",
+        "institucion": "DUOC UC",
+        "fecha": "2020-2024"
       },
       {
-        "titulo": "Maestría en Ingeniería de Software",
-        "institucion": "Universidad ABC",
-        "fecha": "2020-2022"
+        "titulo": "Bootcamp Desarrollador FullStack",
+        "institucion": "Bootcamp Alura Latam",
+        "fecha": "2022-2023"
       }
     ],
     "experiencia": [
@@ -155,6 +161,16 @@ export const sobremi: SobreMi[] =[
         "id": 4,
         "titulo": "Python",
         "escuela": "Coursera"
+      },
+      {
+        "id": 5,
+        "titulo": "Front-End",
+        "escuela": "Alura Latam"
+      },
+      {
+        "id": 6,
+        "titulo": "Back-End",
+        "escuela": "Alura Latam"
       }
     ],
     "proyectos": [

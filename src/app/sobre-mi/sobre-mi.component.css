@@ -17,6 +17,7 @@
 
 .container {
   position: relative;
+  text-align: center;
   background-color: rgba(174, 166, 166, 0.9);
   padding: 20px;
   border-radius: 10px;
@@ -74,6 +75,19 @@
   grid-row: 1 / span 2;
   grid-column: 1 / span 1;
 }
+
+.modern-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.modern-table th,
+.modern-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+
 
 @media (max-width: 768px) {
   .grid-container {

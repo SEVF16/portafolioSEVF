@@ -7,18 +7,44 @@
   height: 90vh;
 }
 
+@keyframes typing {
+  from {
+    width: 0; /* Iniciar con una anchura de 0 para simular el tecleo */
+  }
+  to {
+    width: 100%; /* Aumentar la anchura al 100% para mostrar todo el texto */
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent; /* Mostrar un cursor intermitente */
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
 .inicio__title {
   font-size: 2rem;
-  color: #333;
+  color: #f5e7e7;
   margin: 0;
   text-align: center;
+  border-right: 2px solid transparent; /* Crear el efecto del cursor */
+  white-space: nowrap; /* Evitar que el texto se desplace automáticamente a la siguiente línea */
+  overflow: hidden; /* Ocultar el texto que excede el ancho del contenedor */
+  animation: typing 2s steps(40, end), blink-caret 0.75s step-end ;
 }
 
 .inicio__subtitle {
   font-size: 1.5rem;
-  color: #666;
+  color: #e0d2d2;
   margin: 0;
   text-align: center;
+  border-right: 2px solid transparent; /* Crear el efecto del cursor */
+  white-space: nowrap; /* Evitar que el texto se desplace automáticamente a la siguiente línea */
+  overflow: hidden; /* Ocultar el texto que excede el ancho del contenedor */
+  animation: typing 2s steps(40, end), blink-caret 0.75s step-end ;
 }
 
 .front {
@@ -77,6 +103,25 @@
 
 .download-button:hover {
   background-color: #666;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Cambiar a dirección de columna en dispositivos móviles */
+    height: auto; /* Ajustar altura automáticamente en dispositivos móviles */
+    padding: 10px; /* Reducir el padding en dispositivos móviles */
+  }
+
+  .front {
+    width: 100%; /* Ajustar al 100% del ancho en dispositivos móviles */
+    max-width: 500px; /* Establecer un ancho máximo para evitar que se extienda demasiado en pantallas grandes */
+    margin: 0 auto; /* Centrar horizontalmente */
+    padding: 10px; /* Reducir el padding en dispositivos móviles */
+  }
+
+  .inicio__title {
+    font-size: 1.4rem; /* Ajustar el tamaño de fuente en dispositivos móviles */
+  }
 }
 
 

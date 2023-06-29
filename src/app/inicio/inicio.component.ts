@@ -11,13 +11,11 @@ import { Experiencia } from '../models/experiencia.interface';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent implements OnInit {
-  isFlipped: boolean;
   nombre: string;
   edad: number;
   profesion: string;
   sobreMi: SobreMi[] = [];
   constructor(private allservice: AllservicesService ) {
-    this.isFlipped = false;
     this.nombre = '';
     this.edad = 0;
     this.profesion = '';
@@ -31,7 +29,6 @@ export class InicioComponent implements OnInit {
 
   data(){
     this.sobreMi.push(this.allservice.getSobreMi());
-    console.log(this.sobreMi);
     this.nombre = this.sobreMi[0].nombre;
     this.edad = this.sobreMi[0].edad;
     this.profesion = this.sobreMi[0].profesion;
