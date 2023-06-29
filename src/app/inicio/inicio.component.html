@@ -1,28 +1,27 @@
-<div class="container" id="card">
-  <div class="card" [ngClass]="{'flipped': isFlipped}" (click)="flipCard()">
-    <div class="front">
-      <!-- Contenido de la cara frontal de la tarjeta -->
-      <h2>Información personal</h2>
-      <p>Nombre: {{ nombre }}</p>
-      <p>Edad: {{ edad }}</p>
-      <p>Profesión: {{ profesion }}</p>
-      <div class="social-icons">
-        <a href="https://github.com/tu_usuario" target="_blank" rel="noopener">
-          <i class="fab fa-github" (click)="$event.stopPropagation()"></i>
-        </a>
-        <a href="https://linkedin.com/in/tu_perfil" target="_blank" rel="noopener">
-          <i class="fab fa-linkedin" (click)="$event.stopPropagation()"></i>
-        </a>
-      </div>
-      <button class="download-button" (click)="$event.stopPropagation()">
-        <i class="fas fa-download"></i> Descargar CV
-      </button>
+
+<div class="container">
+  <div  class="inicio">
+    <h1 class="inicio__title">Hola soy Desarrollador Web Junior</h1>
+    <h2 class="inicio__subtitle">¡Este es mi portafolio!</h2>
+  </div>
+  <div class="front">
+    <!-- Contenido de la cara frontal de la tarjeta -->
+    <p>Nombre: {{ nombre }}</p>
+    <p>Edad: {{ edad }}</p>
+    <p>Profesión: {{ profesion }}</p>
+    <div class="social-icons">
+      <a href="https://github.com/tu_usuario" target="_blank" rel="noopener">
+        <i class="fab fa-github" (click)="$event.stopPropagation()"></i>
+      </a>
+      <a href="https://linkedin.com/in/tu_perfil" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin" (click)="$event.stopPropagation()"></i>
+      </a>
     </div>
-    <div class="back">
-      <!-- Contenido de la cara trasera de la tarjeta -->
-      <app-sobre-mi></app-sobre-mi>
-    </div>
+    <button class="download-button" (click)="$event.stopPropagation()">
+      <i class="fas fa-download"></i> Descargar CV
+    </button>
   </div>
 </div>
+
 
 

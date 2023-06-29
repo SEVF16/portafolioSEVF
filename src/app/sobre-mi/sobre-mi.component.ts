@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { AllservicesService } from '../services/allservices.service';
 import { Curso } from '../models/curso.interface';
 import { Educacion } from '../models/educacion.interface';
 import { SobreMi } from '../models/sobremi.interface';
 import { Experiencia } from '../models/experiencia.interface';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-sobre-mi',
@@ -23,8 +24,10 @@ export class SobreMiComponent implements OnInit {
    }
 
   ngOnInit(): void {
+
     this.data();
   }
+
 
   data(){
     const sobreMi: SobreMi = this.allservice.getSobreMi();

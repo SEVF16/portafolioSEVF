@@ -1,38 +1,40 @@
-<div class="grid-container">
-  <div class="container info-Cursos hover">
-    <h1>Cursos</h1>
-    <table>
-      <tr>
-        <th>Lenguaje</th>
-        <th>Escuela</th>
-      </tr>
-      <tr *ngFor="let curso of arrCursos">
-        <td>{{curso.titulo}}</td>
-        <td>{{curso.escuela}}</td>
-      </tr>
-    </table>
-  </div>
+<div class="containerPadre">
+  <div class="grid-container">
+    <div class="container info-Cursos hover">
+      <h1>Cursos</h1>
+      <table>
+        <tr>
+          <th>Lenguaje</th>
+          <th>Escuela</th>
+        </tr>
+        <tr *ngFor="let curso of arrCursos">
+          <td>{{curso.titulo}}</td>
+          <td>{{curso.escuela}}</td>
+        </tr>
+      </table>
+    </div>
 
-  <div class="container info-Educacion hover">
-    <h1>Instituto Educativo</h1>
-    <table>
-      <tr *ngFor="let edu of arrEducacion">
-        <th>{{edu.titulo}}</th>
-        <th>{{edu.institucion}}</th>
-        <th>{{edu.fecha}}</th>
-      </tr>
-    </table>
-  </div>
+    <div class="container info-Educacion hover">
+      <h1>Instituto Educativo</h1>
+      <table>
+        <tr *ngFor="let edu of arrEducacion">
+          <th>{{edu.titulo}}</th>
+          <th>{{edu.institucion}}</th>
+          <th>{{edu.fecha}}</th>
+        </tr>
+      </table>
+    </div>
 
-  <div class="container info-Experiencia hover"  *ngFor="let exp of arrExperiencia">
-    <h1 >{{exp.titulo}}</h1>
-    <h4>{{exp.empresa}}</h4>
-    <h6>{{exp.fecha}}</h6>
-  </div>
+    <div class="container info-Experiencia hover"  *ngFor="let exp of arrExperiencia">
+      <h1 >{{exp.titulo}}</h1>
+      <h4>{{exp.empresa}}</h4>
+      <h6>{{exp.fecha}}</h6>
+    </div>
 
-  <div class="container info-Objetivos hover">
-    <h1>Objetivo</h1>
-    <p>{{objetivo}}</p>
+    <div class="container info-Objetivos hover">
+      <h1>Objetivo</h1>
+      <p>{{objetivo}}</p>
+    </div>
   </div>
 </div>
 
