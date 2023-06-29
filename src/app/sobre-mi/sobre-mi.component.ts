@@ -4,7 +4,7 @@ import { Curso } from '../models/curso.interface';
 import { Educacion } from '../models/educacion.interface';
 import { SobreMi } from '../models/sobremi.interface';
 import { Experiencia } from '../models/experiencia.interface';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+
 
 @Component({
   selector: 'app-sobre-mi',

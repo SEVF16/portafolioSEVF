@@ -8,8 +8,6 @@ import { HeaderComponent } from './layout/header/header.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { SobreMiComponent } from './sobre-mi/sobre-mi.component';
 import { HabilidadesComponent } from './habilidades/habilidades.component';
-import { ContactoComponent } from './contacto/contacto.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import {BrowserAnimationsModule} from  '@angular/platform-browser/animations';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -21,13 +19,11 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
     InicioComponent,
     SobreMiComponent,
     HabilidadesComponent,
-    ContactoComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CarouselModule,
     BrowserAnimationsModule
   ],
   providers: [],

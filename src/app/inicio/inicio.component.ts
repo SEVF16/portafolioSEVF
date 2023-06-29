@@ -15,20 +15,13 @@ export class InicioComponent implements OnInit {
   nombre: string;
   edad: number;
   profesion: string;
-  arrCursos: Curso[];
-  arrEducacion: Educacion[];
-  arrExperiencia: Experiencia[];
-  objetivo: string;
   sobreMi: SobreMi[] = [];
   constructor(private allservice: AllservicesService ) {
     this.isFlipped = false;
     this.nombre = '';
     this.edad = 0;
     this.profesion = '';
-    this.arrCursos = [];
-    this.arrEducacion= [];
-    this.arrExperiencia = [];
-    this.objetivo = '';
+
   }
 
   ngOnInit(): void {
