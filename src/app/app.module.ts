@@ -11,6 +11,7 @@ import { HabilidadesComponent } from './habilidades/habilidades.component';
 import {BrowserAnimationsModule} from  '@angular/platform-browser/animations';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

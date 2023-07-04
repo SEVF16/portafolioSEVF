@@ -1,3 +1,4 @@
+<h1 class="title">Conóceme</h1>
 <div class="containerPadre">
   <div class="grid-container">
     <div class="container info-Cursos hover">
@@ -37,6 +38,18 @@
     </div>
   </div>
 </div>
+<h1 class="title">Certificaciones</h1>
+<div class="carousel">
+  <div class="slide" *ngFor="let slide of slides; let i = index" [ngClass]="{ 'active': i === currentIndex }">
+    <img [src]="slide.imageUrl" alt="{{ slide.title }}" *ngIf="i === currentIndex">
+  </div>
+
+  <button class="carousel-btn prev" (click)="prevSlide()">&#8249;</button>
+  <button class="carousel-btn next" (click)="nextSlide()">&#8250;</button>
+</div>
+
+
+
 
 
 
