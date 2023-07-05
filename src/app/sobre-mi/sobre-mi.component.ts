@@ -16,7 +16,7 @@ export class SobreMiComponent implements OnInit {
   arrEducacion: Educacion[];
   arrExperiencia: Experiencia[];
   objetivo: string;
-
+  slide: any;
   constructor(private allservice: AllservicesService ) {
     this.arrCursos = [];
     this.arrEducacion= [];
@@ -38,24 +38,19 @@ export class SobreMiComponent implements OnInit {
     this.arrEducacion = sobreMi.educacion;
     this.arrExperiencia = sobreMi.experiencia;
     this.objetivo = sobreMi.resumen;
+
+    this.slide = this.arrCursos.map((img) => img.img).filter((url) => url !==undefined)
   }
 
   currentIndex = 0;
   interval: any;
-  slides = [
-    { title: 'Slide 1', imageUrl: './assets/img/OracleOne.png' },
-    { title: 'Slide 2', imageUrl: './assets/img/mysql.png' },
-    { title: 'Slide 3', imageUrl: './assets/img/oci.png' },
-    { title: 'Slide 3', imageUrl: './assets/img/javaoracle.png' },
-    { title: 'Slide 3', imageUrl: './assets/img/frontendalura.png' }
-  ];
 
   prevSlide() {
-    this.currentIndex = (this.currentIndex === 0) ? this.slides.length - 1 : this.currentIndex - 1;
+    this.currentIndex = (this.currentIndex === 0) ? this.slide.length - 1 : this.currentIndex - 1;
   }
 
   nextSlide() {
-    this.currentIndex = (this.currentIndex === this.slides.length - 1) ? 0 : this.currentIndex + 1;
+    this.currentIndex = (this.currentIndex === this.slide.length - 1) ? 0 : this.currentIndex + 1;
   }
 
 }

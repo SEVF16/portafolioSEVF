@@ -145,12 +145,13 @@ export const sobremi: SobreMi[] =[
       {
         "id": 1,
         "titulo": "Master en JavaScript",
-        "escuela": "Udemy"
+        "escuela": "Udemy",
       },
       {
         "id": 2,
         "titulo": "Oracle Alura Latam",
-        "escuela": "Alura"
+        "escuela": "Alura",
+        "img": "./assets/img/OracleOne.png"
       },
       {
         "id": 3,
@@ -165,34 +166,56 @@ export const sobremi: SobreMi[] =[
       {
         "id": 5,
         "titulo": "Front-End",
-        "escuela": "Alura Latam"
+        "escuela": "Alura Latam",
+        "img": "./assets/img/frontendalura.png"
       },
       {
         "id": 6,
         "titulo": "Back-End",
-        "escuela": "Alura Latam"
+        "escuela": "Alura Latam",
+        "img": "./assets/img/javaoracle.png"
+      },
+      {
+        "id": 7,
+        "titulo": "MySql",
+        "escuela": "Alura Latam",
+        "img": "./assets/img/mysql.png"
+      },
+      {
+        "id": 8,
+        "titulo": "Oracle Cloud",
+        "escuela": "Alura Latam",
+        "img": "./assets/img/oci.png"
       }
     ],
     "proyectos": [
       {
         "id": 1,
         "name": "Rick&Morty",
-        "img": "./assets/img/rickmorty.png"
+        "img": "./assets/img/rickmorty.png",
+        "habilidades": [],
+        "url": "https://github.com/SEVF16/RickMortyAngular"
       },
       {
         "id": 2,
         "name": "The Movie Web",
-        "img": "./assets/img/themovieweb.png"
+        "img": "./assets/img/themovieweb.png",
+        "habilidades": [],
+        "url": "https://github.com/SEVF16/TheMovieWeb"
       },
       {
         "id": 3,
         "name": "Dummy",
-        "img": "./assets/img/dummy.png"
+        "img": "./assets/img/dummy.png",
+        "habilidades": [],
+        "url": "https://github.com/SEVF16/GummyTest"
       },
       {
         "id": 4,
         "name": "Ecommerce Geek",
-        "img": "./assets/img/ecommerceAlura.png"
+        "img": "./assets/img/ecommerceAlura.png",
+        "habilidades": [],
+        "url": "https://github.com/SEVF16/AluraGeek"
       }
     ]
   }

@@ -1,9 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SecurityContext } from '@angular/core';
 import { AllservicesService } from '../services/allservices.service';
 import { SobreMi } from '../models/sobremi.interface';
-import { Curso } from '../models/curso.interface';
-import { Educacion } from '../models/educacion.interface';
-import { Experiencia } from '../models/experiencia.interface';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-inicio',
@@ -15,11 +14,13 @@ export class InicioComponent implements OnInit {
   edad: number;
   profesion: string;
   sobreMi: SobreMi[] = [];
-  constructor(private allservice: AllservicesService ) {
+  cvUrl: SafeResourceUrl;
+
+  constructor(private allservice: AllservicesService, private sanitizer: DomSanitizer ) {
     this.nombre = '';
     this.edad = 0;
     this.profesion = '';
-
+    this.cvUrl = this.sanitizer.bypassSecurityTrustResourceUrl('/assets/img/CvDeveloperShiryuValecillos.pdf');
   }
 
   ngOnInit(): void {
@@ -33,6 +34,15 @@ export class InicioComponent implements OnInit {
     this.edad = this.sobreMi[0].edad;
     this.profesion = this.sobreMi[0].profesion;
   }
+
+
+  downloadCV(): void {
+    const link = document.createElement('a');
+    link.href = this.sanitizer.sanitize(SecurityContext.URL, this.cvUrl) ?? '';
+    link.download = 'CvDeveloperShiryuValecillos.pdf';
+    link.click();
+  }
+
 
 
 }

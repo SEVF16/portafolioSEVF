@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -15,19 +15,31 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.checkMobileView();
-    window.addEventListener('resize', () => {
-      this.checkMobileView();
-    });
+    window.addEventListener('resize', this.checkMobileView.bind(this));
+    document.addEventListener('click', this.onDocumentClick.bind(this));
   }
 
+  ngOnDestroy(): void {
+    window.removeEventListener('resize', this.checkMobileView.bind(this));
+    document.removeEventListener('click', this.onDocumentClick.bind(this));
+  }
 
   toggleMobileMenu() {
     this.isMobileMenuOpen = !this.isMobileMenuOpen;
   }
 
-
+  @HostListener('window:resize')
   checkMobileView() {
-    this.isMobileView = window.innerWidth <= 768; // Ajusta el ancho máximo para determinar el cambio a vista móvil
+    this.isMobileView = window.innerWidth <= 768;
+  }
+
+  onDocumentClick(event: MouseEvent) {
+    const target = event.target as HTMLElement;
+    const menu = document.querySelector('.menu');
+
+    if (menu && !menu.contains(target)) {
+      this.isMobileMenuOpen = false;
+    }
   }
 
 }

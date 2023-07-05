@@ -26,9 +26,9 @@
       <div class="card-content-proyecto">
         <h4>{{proyecto.name}}</h4>
         <img [src]="proyecto.img" alt="Proyecto">
-        <button class="btn-ver-repositorio">
+        <a class="btn-ver-repositorio" [href]="proyecto.url" target="_blank">
           <i class="fa-regular fa-eye"></i> Ver Repositorio
-        </button>
+        </a>
       </div>
     </div>
   </div>

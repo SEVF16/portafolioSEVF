@@ -151,7 +151,7 @@ hr {
   height: 100wh;
   object-fit: cover;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 
@@ -159,6 +159,7 @@ hr {
   background-color: green;
   color: white;
   border: none;
+
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;

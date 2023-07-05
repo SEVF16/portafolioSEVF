@@ -40,8 +40,8 @@
 </div>
 <h1 class="title">Certificaciones</h1>
 <div class="carousel">
-  <div class="slide" *ngFor="let slide of slides; let i = index" [ngClass]="{ 'active': i === currentIndex }">
-    <img [src]="slide.imageUrl" alt="{{ slide.title }}" *ngIf="i === currentIndex">
+  <div class="slide" *ngFor="let slides of slide; let i = index" [ngClass]="{ 'active': i === currentIndex }">
+    <img [src]="slides">
   </div>
 
   <button class="carousel-btn prev" (click)="prevSlide()">&#8249;</button>
